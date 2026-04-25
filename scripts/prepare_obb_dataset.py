@@ -116,7 +116,7 @@ def main() -> int:
     copied_val = copy_group(val_images, labels_dir, output_dir, "valid")
 
     data = {
-        "path": str(output_dir).replace("\\", "/"),
+        "path": ".",
         "train": "train/images",
         "val": "valid/images",
         "names": {0: "datamatrix"},
