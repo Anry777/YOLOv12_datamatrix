@@ -170,3 +170,51 @@ mAP50-95=0.863
 
 Этот датасет нужен для следующего этапа: обучить OBB-модель, чтобы получать
 повернутые боксы по марке, а не горизонтальные bbox.
+
+Подготовленный вариант лежит в `dataset_oriented_prepared/`:
+
+```text
+train: 255 images / 255 labels
+valid: 45 images / 45 labels
+label format: class + 4 normalized corner points
+```
+
+Датасет пересобирается командой:
+
+```bash
+bash scripts/prepare_obb_dataset.sh
+```
+
+Smoke-check параметров OBB-обучения:
+
+```bash
+source .venv/bin/activate
+python scripts/train_yolo_obb.py \
+  --data dataset_oriented_prepared/data.yaml \
+  --model yolo11n-obb.pt \
+  --epochs 3 \
+  --imgsz 640 \
+  --batch 4 \
+  --device 0 \
+  --dry-run
+```
+
+Основной запуск OBB на VPS:
+
+```bash
+bash scripts/train_obb_960.sh
+```
+
+Проверка OBB-весов на `test_set`:
+
+```bash
+bash scripts/detect_obb_test_set.sh \
+  runs/datamatrix_obb_960/weights/best.pt \
+  outputs/test_set_obb
+```
+
+OBB detector сохраняет:
+
+- `*_annotated.jpg` с повернутыми рамками;
+- `*_detections.json` с 4 точками OBB;
+- `crops/` с перспективно выровненными crops по четырем точкам.

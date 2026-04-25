@@ -1,0 +1,5 @@
+path: E:/Python/YOLOv12_datamatrix/dataset_oriented_prepared
+train: train/images
+val: valid/images
+names:
+  0: datamatrix
