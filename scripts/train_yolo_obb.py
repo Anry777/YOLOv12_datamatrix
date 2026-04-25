@@ -25,7 +25,7 @@ def parse_args() -> argparse.Namespace:
     return parser.parse_args()
 
 
-def validate_dataset_yaml(data_path: Path) -> None:
+def resolve_dataset_yaml(data_path: Path, runtime_path: Path) -> Path:
     data_path = data_path.resolve()
     if not data_path.exists():
         raise SystemExit(f"dataset yaml не найден: {data_path}")
@@ -46,13 +46,26 @@ def validate_dataset_yaml(data_path: Path) -> None:
         if not split_path.exists():
             raise SystemExit(f"Путь {split} не найден: {split_path}")
 
+    resolved_data = dict(data)
+    resolved_data["path"] = str(base_path).replace("\\", "/")
+
+    runtime_path.parent.mkdir(parents=True, exist_ok=True)
+    runtime_path.write_text(
+        yaml.safe_dump(resolved_data, sort_keys=False, allow_unicode=True),
+        encoding="utf-8",
+    )
+    return runtime_path
+
 
 def main() -> int:
     args = parse_args()
-    validate_dataset_yaml(Path(args.data))
+    data_path = resolve_dataset_yaml(
+        Path(args.data),
+        Path(args.project) / "_runtime_obb_data.yaml",
+    )
 
     train_kwargs = {
-        "data": args.data,
+        "data": str(data_path),
         "epochs": args.epochs,
         "imgsz": args.imgsz,
         "batch": args.batch,
