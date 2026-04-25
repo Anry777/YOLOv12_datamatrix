@@ -1,0 +1,15 @@
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.cache
+.DS_Store
+
+runs/
+outputs/
+wandb/
+
+dataset/**/*.cache
+test_set/**/*.cache
+
+*.log

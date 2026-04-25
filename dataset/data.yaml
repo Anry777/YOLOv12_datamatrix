@@ -1,0 +1,12 @@
+train: train/images
+val: valid/images
+
+nc: 1
+names: ['datamatrix']
+
+roboflow:
+  workspace: san-gmevs
+  project: datamatrix-h9lv5
+  version: 1
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/san-gmevs/datamatrix-h9lv5/dataset/1
