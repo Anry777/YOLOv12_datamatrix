@@ -1,0 +1,20 @@
+{
+  "image_path": "test_set/2026-03-15_21-30-32.png",
+  "annotated_path": "outputs/test_set_yolo12n_960-2/2026-03-15_21-30-32_annotated.jpg",
+  "width": 362,
+  "height": 353,
+  "elapsed_ms": 57,
+  "detections": [
+    {
+      "class_id": 0,
+      "class_name": "datamatrix",
+      "confidence": 0.27776503562927246,
+      "xyxy": [
+        26.742895126342773,
+        61.67787170410156,
+        292.36077880859375,
+        313.6436462402344
+      ]
+    }
+  ]
+}

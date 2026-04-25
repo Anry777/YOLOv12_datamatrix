@@ -123,3 +123,50 @@ outputs/
 
 На локальной машине эти `best.pt` можно подставлять в текущий стенд
 `tools/gs1_detection_bench/detect_datamatrix.py`.
+
+## Текущий обученный baseline
+
+Папка `results/` содержит первый обученный рабочий результат:
+
+```text
+results/weights/best.pt
+results/results.csv
+results/results.png
+results/test_set_yolo12n_960-2/
+```
+
+Run на VPS: `datamatrix_yolo12n_960-2`.
+
+Основные параметры:
+
+```text
+model: yolo12n.pt
+imgsz: 960
+batch: 10
+patience: 25
+```
+
+Лучший результат был на 59-й эпохе:
+
+```text
+P=1.000
+R=0.984
+mAP50=0.995
+mAP50-95=0.863
+```
+
+На `test_set` этот вес дал 9/9 детекций класса `datamatrix`.
+
+## Oriented Dataset
+
+`dataset_oriented/` - сырой Roboflow export с повернутой разметкой DataMatrix.
+
+Важно:
+
+- сейчас в нем есть только `train`;
+- labels содержат 4 угла плюс повтор первой точки в конце;
+- перед обучением YOLO OBB нужно подготовить отдельный clean split
+  `train/valid` и убрать повторную последнюю точку.
+
+Этот датасет нужен для следующего этапа: обучить OBB-модель, чтобы получать
+повернутые боксы по марке, а не горизонтальные bbox.

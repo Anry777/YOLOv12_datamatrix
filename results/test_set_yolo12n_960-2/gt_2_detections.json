@@ -1,0 +1,20 @@
+{
+  "image_path": "test_set/gt_2.png",
+  "annotated_path": "outputs/test_set_yolo12n_960-2/gt_2_annotated.jpg",
+  "width": 255,
+  "height": 252,
+  "elapsed_ms": 55,
+  "detections": [
+    {
+      "class_id": 0,
+      "class_name": "datamatrix",
+      "confidence": 0.768862247467041,
+      "xyxy": [
+        35.576255798339844,
+        12.92074203491211,
+        222.5220947265625,
+        198.76669311523438
+      ]
+    }
+  ]
+}

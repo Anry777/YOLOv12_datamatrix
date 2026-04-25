@@ -1,0 +1,182 @@
+[
+  {
+    "image_path": "test_set/2026-02-21_10-18-29.png",
+    "annotated_path": "outputs/test_set_yolo12n_960-2/2026-02-21_10-18-29_annotated.jpg",
+    "width": 600,
+    "height": 561,
+    "elapsed_ms": 759,
+    "detections": [
+      {
+        "class_id": 0,
+        "class_name": "datamatrix",
+        "confidence": 0.8577880859375,
+        "xyxy": [
+          98.39212036132812,
+          93.58399963378906,
+          533.4854125976562,
+          527.0994873046875
+        ]
+      }
+    ]
+  },
+  {
+    "image_path": "test_set/2026-02-27_20-14-59.png",
+    "annotated_path": "outputs/test_set_yolo12n_960-2/2026-02-27_20-14-59_annotated.jpg",
+    "width": 475,
+    "height": 392,
+    "elapsed_ms": 51,
+    "detections": [
+      {
+        "class_id": 0,
+        "class_name": "datamatrix",
+        "confidence": 0.8975498676300049,
+        "xyxy": [
+          69.91090393066406,
+          64.13793182373047,
+          360.1752624511719,
+          339.60760498046875
+        ]
+      }
+    ]
+  },
+  {
+    "image_path": "test_set/2026-03-10_11-07-44.png",
+    "annotated_path": "outputs/test_set_yolo12n_960-2/2026-03-10_11-07-44_annotated.jpg",
+    "width": 231,
+    "height": 210,
+    "elapsed_ms": 57,
+    "detections": [
+      {
+        "class_id": 0,
+        "class_name": "datamatrix",
+        "confidence": 0.9311167597770691,
+        "xyxy": [
+          33.27293395996094,
+          18.74520492553711,
+          201.44728088378906,
+          186.44366455078125
+        ]
+      }
+    ]
+  },
+  {
+    "image_path": "test_set/2026-03-10_12-51-01.png",
+    "annotated_path": "outputs/test_set_yolo12n_960-2/2026-03-10_12-51-01_annotated.jpg",
+    "width": 204,
+    "height": 207,
+    "elapsed_ms": 59,
+    "detections": [
+      {
+        "class_id": 0,
+        "class_name": "datamatrix",
+        "confidence": 0.9305657148361206,
+        "xyxy": [
+          34.69664764404297,
+          8.691879272460938,
+          184.9744873046875,
+          155.38670349121094
+        ]
+      }
+    ]
+  },
+  {
+    "image_path": "test_set/2026-03-15_21-30-32.png",
+    "annotated_path": "outputs/test_set_yolo12n_960-2/2026-03-15_21-30-32_annotated.jpg",
+    "width": 362,
+    "height": 353,
+    "elapsed_ms": 57,
+    "detections": [
+      {
+        "class_id": 0,
+        "class_name": "datamatrix",
+        "confidence": 0.27776503562927246,
+        "xyxy": [
+          26.742895126342773,
+          61.67787170410156,
+          292.36077880859375,
+          313.6436462402344
+        ]
+      }
+    ]
+  },
+  {
+    "image_path": "test_set/2026-03-15_21-37-05.png",
+    "annotated_path": "outputs/test_set_yolo12n_960-2/2026-03-15_21-37-05_annotated.jpg",
+    "width": 431,
+    "height": 369,
+    "elapsed_ms": 51,
+    "detections": [
+      {
+        "class_id": 0,
+        "class_name": "datamatrix",
+        "confidence": 0.841965913772583,
+        "xyxy": [
+          76.3973617553711,
+          71.34111022949219,
+          329.9834289550781,
+          325.3939208984375
+        ]
+      }
+    ]
+  },
+  {
+    "image_path": "test_set/2026-03-23_19-34-13.png",
+    "annotated_path": "outputs/test_set_yolo12n_960-2/2026-03-23_19-34-13_annotated.jpg",
+    "width": 430,
+    "height": 437,
+    "elapsed_ms": 56,
+    "detections": [
+      {
+        "class_id": 0,
+        "class_name": "datamatrix",
+        "confidence": 0.9381415247917175,
+        "xyxy": [
+          41.43613815307617,
+          69.54680633544922,
+          338.6394348144531,
+          361.0898742675781
+        ]
+      }
+    ]
+  },
+  {
+    "image_path": "test_set/2026-04-06_09-15-48.png",
+    "annotated_path": "outputs/test_set_yolo12n_960-2/2026-04-06_09-15-48_annotated.jpg",
+    "width": 472,
+    "height": 514,
+    "elapsed_ms": 55,
+    "detections": [
+      {
+        "class_id": 0,
+        "class_name": "datamatrix",
+        "confidence": 0.7917060256004333,
+        "xyxy": [
+          48.319313049316406,
+          17.81159210205078,
+          375.0749816894531,
+          354.4745178222656
+        ]
+      }
+    ]
+  },
+  {
+    "image_path": "test_set/gt_2.png",
+    "annotated_path": "outputs/test_set_yolo12n_960-2/gt_2_annotated.jpg",
+    "width": 255,
+    "height": 252,
+    "elapsed_ms": 55,
+    "detections": [
+      {
+        "class_id": 0,
+        "class_name": "datamatrix",
+        "confidence": 0.768862247467041,
+        "xyxy": [
+          35.576255798339844,
+          12.92074203491211,
+          222.5220947265625,
+          198.76669311523438
+        ]
+      }
+    ]
+  }
+]
